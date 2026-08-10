@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.9
+# Range Operation Platform v1.3.10
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -128,3 +128,11 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Dashboard filters, groups, counts, sections, and Gantt only use projects flagged Show.
 - Dashboard Flag can be sorted directly from the Project List header.
 - Added Dashboard Visibility to the Project edit dialog.
+
+
+## v1.3.10
+- Fixed Detail Plan Structure `+ Milestone` buttons that could fail because Task names were inserted unsafely into inline click handlers.
+- Added `+ Milestone` at Sub Task level so a new milestone can be created directly inside the selected Task/Sub Task.
+- New milestone modal now pre-fills both Task and Sub Task when launched from a Sub Task row.
+- Task selector preserves the current Task even when it is not present in Task Master.
+- Existing projects, dashboard configuration, and interactive Gantt behavior are preserved.
