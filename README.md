@@ -166,8 +166,7 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 
 
 ## v1.3.14
-- Dashboard phasing hierarchy now displays each Task as a parent row first, followed by its indented Sub-Task rows.
-- Task rows show a summary Active Phase across all milestones in that task.
-- Sub-Task rows remain the detailed phasing rows and retain milestone labels, dates, anti-overlap levels, and timeline markers.
-- Added visual hierarchy connector/indentation to make Sub-Tasks read as work phases under their parent Task.
-- Renamed the dashboard timeline mode to “Task → Sub-Task Phasing”.
+- Dashboard Sub-Task Phasing rows are aligned directly under the Project Name column so they read as a sub-plan of the parent project.
+- Event Type, Format, Live Week and Status remain on the parent Project row and are not repeated for Sub-Task rows.
+- Milestone labels use transparent backgrounds with a subtle white text halo so the yellow milestone triangles remain fully visible.
+- Existing Month/Week/Day views, filters, Section/Sub-Section, sorting and milestone anti-overlap logic are preserved.
