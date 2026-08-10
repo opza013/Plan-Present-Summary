@@ -1,4 +1,4 @@
-# Range Operation Platform v1.2.0
+# Range Operation Platform v1.3.0
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. It does not depend on OnePlan or SharePoint.
 
@@ -34,3 +34,16 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Yellow milestone triangles generated from Detail Plan activities.
 - Red dashed current-date marker with “We're here”.
 - Clicking a process opens its Detail Plan.
+
+
+## v1.3.0
+- Imported all project data from the three supplied WK33 weekly project update decks.
+- 34 projects and 223 timeline/detail-plan activities are preloaded.
+- Preserves Project Type, Project Name, remarks, Hypermarket/Mini Supermarket context, timeline milestones, explicit LIVE/GO/Set Up/Relaunch dates and source update owner.
+- Added imported milestone terms to Key Milestone Master and `Weekly Project Update` to Task Master.
+- Existing v1.2.x browser data is migrated automatically: the sample project is removed and the imported projects/masters are merged without deleting user-created projects.
+- Dashboard Live week now prioritizes LIVE milestones, then Implementation/Relaunch/GO fallbacks.
+- Detail Plan and Presentation show the exact imported milestone label when it differs from the master code.
+
+## v1.2.1
+- Updated the top-left brand label so “Range Operation Platform” uses one consistent font size, weight, and color.
