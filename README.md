@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.6
+# Range Operation Platform v1.3.7
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -102,3 +102,12 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Live Week remains calculated from project milestones; Status remains calculated from Detail Plan activity status to avoid conflicting sources of truth.
 - Added quick search and direct Detail Plan access.
 - Existing project data, Dashboard, Sections, Filters, Sorting and interactive Gantt are preserved.
+
+
+## v1.3.7
+- Added Format as a primary Dashboard Gantt column.
+- Added nested Dashboard grouping with Section by + Sub-Section by using existing project fields.
+- Sub-Section supports Event Type, Format, Division, Department, Owner and Status, with None as default.
+- Added Sub-Section filter when a sub-group field is active.
+- Dashboard columns Event Type, Format, Project, Live week and Status are now clickable sort headers with ascending/descending indicators.
+- Preserved existing Detail Plan interactive Gantt, dashboard filters, custom sections and project data.
