@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.15
+# Range Operation Platform v1.3.16
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -179,3 +179,10 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Day cells are generated from local calendar days rather than epoch rounding, preventing timezone shifts.
 - Week labels use Monday-based ISO weeks and remain aligned with the day cells.
 - Month and Year bands use absolute clipped positions so their boundaries match the timeline grid exactly.
+
+
+## v1.3.16
+- Added Dashboard Zoom Out / Zoom In controls from 25% to 200% in 25% steps.
+- Dashboard zoom scales the complete timeline consistently, including Month / Week / Day headers, Active Phase bars, milestone positions, grid spacing, and Today marker.
+- Dashboard zoom level is remembered in browser state.
+- Detail Plan retains its existing independent 25–200% zoom controls.
