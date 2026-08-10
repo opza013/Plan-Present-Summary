@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.5
+# Range Operation Platform v1.3.6
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -93,3 +93,12 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Yellow milestone triangles are anchored directly to the Active Phase bar.
 - Anti-overlap label levels remain enabled; each raised label is connected to its triangle with a dashed leader line.
 - Dashboard filtering, sorting, Section by fields, and Detail Plan interactive Gantt remain unchanged.
+
+
+## v1.3.6
+- Redesigned Project List as an inline Quick Edit table.
+- Core fields shown: Event Type, Project Code/Name, Format, Owner, Plan Start, Plan End, Live Week and Status.
+- Event Type, Code, Project Name, Format, Owner and Plan dates can be edited directly in the table and auto-save on change.
+- Live Week remains calculated from project milestones; Status remains calculated from Detail Plan activity status to avoid conflicting sources of truth.
+- Added quick search and direct Detail Plan access.
+- Existing project data, Dashboard, Sections, Filters, Sorting and interactive Gantt are preserved.
