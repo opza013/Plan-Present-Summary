@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.8
+# Range Operation Platform v1.3.9
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -118,3 +118,13 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Project List headers are clickable for ascending/descending sorting.
 - Project List sortable fields: Event Type, Project, Format, Owner, Plan Start, Plan End, Live Week, and Status.
 - Added sort direction indicators to Project List headers while preserving inline editing and auto-save.
+
+
+## v1.3.9
+- Added a per-project Dashboard Flag in Project List.
+- Each project can be set to Show or Hide on Dashboard without deleting it.
+- Hidden projects remain fully available in Project List, Detail Plan, Presentation, export/import, and editing.
+- Existing projects migrate with Dashboard Flag = Show by default.
+- Dashboard filters, groups, counts, sections, and Gantt only use projects flagged Show.
+- Dashboard Flag can be sorted directly from the Project List header.
+- Added Dashboard Visibility to the Project edit dialog.
