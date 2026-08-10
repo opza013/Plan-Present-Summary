@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.12
+# Range Operation Platform v1.3.13
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -154,3 +154,12 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Week view shows Month → ISO Week.
 - Month view shows Month with Year band.
 - Task / Sub Task grouped timeline rows work across all Dashboard time scales.
+
+
+## v1.3.13
+- Simplified Dashboard Timeline Rows to Project Summary or Sub-Task Phasing.
+- Sub-Task Phasing is now the default dashboard timeline view.
+- Removed the redundant separate Task row from dashboard phasing to reduce visual clutter.
+- Each phasing row shows the Sub-Task prominently with its parent Task as context.
+- Milestones remain plotted on the corresponding Sub-Task row, with phase bar, start-date labels, anti-overlap levels and connector lines.
+- Existing Section/Sub-Section, filters, sorting, Month/Week/Day scales and dashboard visibility flags are preserved.
