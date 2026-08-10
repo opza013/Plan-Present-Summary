@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.14
+# Range Operation Platform v1.3.15
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -170,3 +170,12 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Event Type, Format, Live Week and Status remain on the parent Project row and are not repeated for Sub-Task rows.
 - Milestone labels use transparent backgrounds with a subtle white text halo so the yellow milestone triangles remain fully visible.
 - Existing Month/Week/Day views, filters, Section/Sub-Section, sorting and milestone anti-overlap logic are preserved.
+
+
+## v1.3.15
+- Fixed Dashboard Month / Week / Date alignment.
+- Timeline headers now use the same local-calendar date base as project and milestone dates.
+- Partial first/last months are rendered correctly instead of skipping the month containing the timeline start.
+- Day cells are generated from local calendar days rather than epoch rounding, preventing timezone shifts.
+- Week labels use Monday-based ISO weeks and remain aligned with the day cells.
+- Month and Year bands use absolute clipped positions so their boundaries match the timeline grid exactly.
