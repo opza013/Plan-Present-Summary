@@ -50,7 +50,7 @@ async function saveState(state) {
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-    if (url.pathname === '/api/health') return sendJson(res, 200, { ok: true, app: 'range-plan-presenter', storage: DATA_DIR });
+    if (url.pathname === '/api/health') return sendJson(res, 200, { ok: true, app: 'range-operation-platform', storage: DATA_DIR });
     if (url.pathname === '/api/state' && req.method === 'GET') return sendJson(res, 200, { ok: true, state: await loadState() });
     if (url.pathname === '/api/state' && req.method === 'PUT') {
       const body = JSON.parse(await readBody(req) || '{}');
@@ -68,4 +68,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`Range Plan Presenter listening on ${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`Range Operation Platform listening on ${PORT}`));

@@ -1,4 +1,4 @@
-# Range Plan Presenter v1.1.0
+# Range Operation Platform v1.2.0
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. It does not depend on OnePlan or SharePoint.
 
@@ -18,6 +18,13 @@ Deploy this folder as a Node web service. `render.yaml` is included.
 
 The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is the primary client persistence in v1.0. For shared persistent server storage, point `DATA_DIR` to a persistent disk path or replace the storage adapter with a database.
 
+
+## v1.2.0
+- Renamed dashboard to “Range Operation: Project update”.
+- Renamed application brand to “Range Operation Platform”.
+- Portfolio Gantt left columns changed to Event Type, Project, Live week, Status.
+- Live week is derived from Implementation / Go Live milestone, with Project Planned End as fallback.
+- Key milestone labels are aligned to the same vertical level.
 
 ## v1.1.0
 - Dashboard redesigned as a portfolio Gantt based on the supplied ROM Development Plan 2026 layout.

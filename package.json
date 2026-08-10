@@ -1,6 +1,6 @@
 {
-  "name": "range-plan-presenter",
-  "version": "1.1.0",
+  "name": "range-operation-platform",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
