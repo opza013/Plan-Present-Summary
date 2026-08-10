@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.3
+# Range Operation Platform v1.3.5
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -76,3 +76,20 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Project Planned Start / End are recalculated automatically after a Gantt drag or resize.
 - Key Milestone code in Detail Plan Structure is also clickable to edit.
 - Existing v1.3.2 dashboard sections, filters, sorting, imported project data, and storage structure remain compatible.
+
+
+## v1.3.4
+- Dashboard Section grouping can now be derived automatically from existing Project fields.
+- Added Section by options: Custom Section, Event Type, Format, Division, Department, Owner, and Status.
+- Section filter dynamically follows the selected Section by field.
+- Existing manual Custom Sections remain available and can still be managed/assigned when Custom Section is selected.
+- Added Format to Dashboard sorting.
+- Section-by preference is persisted in app state.
+
+
+## v1.3.5
+- Dashboard milestone labels now show each milestone planned start date.
+- Milestone markers are positioned by Planned Start instead of Planned End.
+- Yellow milestone triangles are anchored directly to the Active Phase bar.
+- Anti-overlap label levels remain enabled; each raised label is connected to its triangle with a dashed leader line.
+- Dashboard filtering, sorting, Section by fields, and Detail Plan interactive Gantt remain unchanged.
