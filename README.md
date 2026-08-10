@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.10
+# Range Operation Platform v1.3.12
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
@@ -136,3 +136,21 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - New milestone modal now pre-fills both Task and Sub Task when launched from a Sub Task row.
 - Task selector preserves the current Task even when it is not present in Task Master.
 - Existing projects, dashboard configuration, and interactive Gantt behavior are preserved.
+
+
+## v1.3.11
+- Added Dashboard timeline grouping: Project / Task / Task → Sub Task.
+- Dashboard can expand each project into nested Task and Sub Task timeline rows while preserving project-level section/sub-section grouping.
+- Added Detail Plan Gantt grouping: Milestone / Task / Task → Sub Task.
+- Task/Sub Task group rows show a summary time span while the underlying milestone bars remain editable and draggable.
+- Existing project data, filters, sorting, Dashboard visibility flags, and interactive Gantt behavior are preserved.
+
+
+## v1.3.12
+- Added Month / Week / Day time-scale selector to the Dashboard portfolio Gantt.
+- Detail Plan Gantt continues to support Month / Week / Day with interactive drag/resize.
+- Dashboard time-scale preference is persisted in app state.
+- Day view shows Month → ISO Week → Date headers and weekend diagonal shading.
+- Week view shows Month → ISO Week.
+- Month view shows Month with Year band.
+- Task / Sub Task grouped timeline rows work across all Dashboard time scales.
