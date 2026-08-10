@@ -1,6 +1,6 @@
-# Range Operation Platform v1.3.1
+# Range Operation Platform v1.3.3
 
-Standalone web app for creating project Detail Plans manually and presenting executive updates. It does not depend on OnePlan or SharePoint.
+Standalone web app for creating project Detail Plans manually and presenting executive updates. OnePlan ingestion/import is intentionally disabled; the app uses only its own project data and explicitly imported backups.
 
 ## Main modules
 - Dashboard / project portfolio
@@ -55,3 +55,24 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 - Improved Day view header into grouped Month / Week / Date bands.
 - Added grey diagonal weekend shading in Day view across the header and timeline area.
 - Preserved existing dashboard, imported project data, and local-storage structure.
+
+
+## v1.3.2
+- OnePlan ingestion/import remains disabled; no data is read from OnePlan workbooks.
+- Dashboard milestone labels use collision detection and automatically move overlapping milestones to lower levels.
+- Project row height grows automatically when multiple milestone levels are needed.
+- Added persistent custom Dashboard Sections with add, rename, reorder, delete, and project assignment.
+- Added Dashboard filters for search, Event Type, Status, Section, and Owner.
+- Added sorting by Live week, Project, Event Type, Status, and Plan Start.
+- Added Custom Sections / All Projects report-view switch.
+
+
+## v1.3.3
+- Detail Plan Gantt milestones are interactive.
+- Click a Gantt milestone bar to open the existing Edit Activity modal.
+- Drag the body of a milestone bar to move Planned Start and Planned End together.
+- Drag the left or right edge to resize the activity duration and update Planned Start / Planned End.
+- Dragging snaps to the active timeline mode: 1 day in Day view, 1 week in Week view, and 1 calendar month in Month view.
+- Project Planned Start / End are recalculated automatically after a Gantt drag or resize.
+- Key Milestone code in Detail Plan Structure is also clickable to edit.
+- Existing v1.3.2 dashboard sections, filters, sorting, imported project data, and storage structure remain compatible.
