@@ -1,4 +1,4 @@
-# Range Operation Platform v1.3.0
+# Range Operation Platform v1.3.1
 
 Standalone web app for creating project Detail Plans manually and presenting executive updates. It does not depend on OnePlan or SharePoint.
 
@@ -47,3 +47,11 @@ The default `DATA_DIR` in the Blueprint is temporary. Browser localStorage is th
 
 ## v1.2.1
 - Updated the top-left brand label so “Range Operation Platform” uses one consistent font size, weight, and color.
+
+
+## v1.3.1
+- Expanded Detail Plan Gantt to use the full available page width.
+- Refined Gantt typography and spacing to reduce overlapping text.
+- Improved Day view header into grouped Month / Week / Date bands.
+- Added grey diagonal weekend shading in Day view across the header and timeline area.
+- Preserved existing dashboard, imported project data, and local-storage structure.
