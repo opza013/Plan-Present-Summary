@@ -2,14 +2,24 @@ services:
   - type: web
     name: range-operation-platform
     runtime: node
-    plan: free
+    plan: starter
     region: singapore
     buildCommand: npm install --omit=dev
     startCommand: npm start
     healthCheckPath: /api/health
     autoDeployTrigger: commit
+    disk:
+      name: range-operation-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: 22
       - key: DATA_DIR
-        value: /tmp/range-operation-platform
+        value: /var/data
+      - key: RANGE_ADMIN_TOKEN
+        sync: false
+      - key: RANGE_EDITOR_TOKEN
+        sync: false
+      - key: RANGE_VIEW_TOKEN
+        sync: false

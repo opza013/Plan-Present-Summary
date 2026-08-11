@@ -1,6 +1,6 @@
 {
   "name": "range-operation-platform",
-  "version": "1.3.14",
+  "version": "2.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,7 @@
     "check": "node --check server.js"
   },
   "engines": {
-    "node": ">=20 <25"
+    "node": ">=22.5 <25"
   },
-  "description": "Standalone Detail Plan and executive presentation app for Range Operation, deployable on Render."
+  "description": "Range Operation Control Tower v2.0 with portfolio planning, shared team state, governance and presentation."
 }
