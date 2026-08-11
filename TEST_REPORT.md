@@ -16,3 +16,10 @@ Validated locally on 2026-08-11:
 ### v2.0.7 Weekend display
 - Verified Day view renders weekend hatch.
 - Verified Week/Month views do not generate weekend bands.
+
+
+### v2.0.8 Milestone triangle baseline
+- Dashboard Project marker base aligns to Project Active Phase lower edge (12px bottom baseline).
+- Dashboard Task marker base aligns to Task Active Phase lower edge (10px bottom baseline).
+- Dashboard Sub-Task and Milestone marker base aligns to their bar lower edge (9px bottom baseline).
+- Detail Plan start marker base aligns to Gantt activity bar lower edge (34px from row top).

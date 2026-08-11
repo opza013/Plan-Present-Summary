@@ -74,3 +74,8 @@
 - Weekend hatch is lighter/thinner and shown only in Day view.
 - Week and Month views no longer render weekend shading.
 - Applied consistently to Dashboard and Detail Plan Gantt.
+
+## v2.0.8
+- Aligned the lower edge of every orange milestone/start triangle with the lower edge of the active bar shown on the same row.
+- Applied consistently across Dashboard Project, Task, Sub-Task, Milestone/Activity rows and Detail Plan Gantt.
+- Preserved milestone collision levels, stems, hierarchy, zoom and time-scale behavior.

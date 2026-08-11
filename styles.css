@@ -54,3 +54,9 @@
 .portfolio-child-track .portfolio-phase{z-index:2}
 .milestone-row-label{pointer-events:none}
 .portfolio-child-track.milestone-track .milestone-activity-bar{top:auto;bottom:9px;transform:none;height:8px}
+
+
+/* v2.0.8 — align milestone triangle lower edge with active bar lower edge */
+/* Detail Plan: bar top 14px + height 20px = lower edge 34px; triangle height 12px -> top 22px. */
+.gantt-start-marker{top:22px}
+/* Dashboard marker positions are calculated from each row's active-bar bottom offset. */

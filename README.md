@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.7 — Integrated Control Tower
+# Range Operation Platform v2.0.8 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -122,3 +122,7 @@ The browser storage key remains unchanged. Existing projects, activities, dashbo
 - A collapsed Sub-Task shows its milestones on the Sub-Task row; expanding it reveals individual Milestone/Activity rows.
 - Individual Milestone/Activity rows retain the orange start triangle and timeline label at the planned-start position.
 - Milestone labels continue using collision levels so collapsed summary rows remain readable.
+
+
+## v2.0.8
+Milestone/start triangle baselines are aligned with the lower edge of the active bar in every Gantt/Timeline view.
