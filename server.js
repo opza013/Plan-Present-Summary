@@ -143,7 +143,7 @@ const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
     if (url.pathname === '/api/health') return sendJson(res, 200, {
-      ok: true, app: 'range-operation-platform', version: '2.0.5', storage: DB_FILE,
+      ok: true, app: 'range-operation-platform', version: '2.0.6', storage: DB_FILE,
       storageEngine: 'sqlite', authConfigured: Object.values(TOKENS).some(Boolean)
     });
     if (url.pathname === '/api/session' && req.method === 'GET') {
@@ -186,4 +186,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`Range Operation Platform v2.0.5 listening on ${PORT} · SQLite ${DB_FILE}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`Range Operation Platform v2.0.6 listening on ${PORT} · SQLite ${DB_FILE}`));

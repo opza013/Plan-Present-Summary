@@ -62,3 +62,9 @@
 - Fixed missing Task/Sub-Task expand/collapse controls.
 - Added Milestone/Activity child rows with independent +/- details.
 - Dashboard hierarchy is now Project → Task → Sub-Task → Milestone/Activity.
+
+
+### v2.0.6
+- Progressive Project → Task → Sub-Task → Milestone disclosure on Dashboard.
+- Collapsed hierarchy rows retain orange start markers and milestone labels/dates.
+- Expanded rows transfer milestone detail to the next hierarchy level to avoid duplicate visual clutter.

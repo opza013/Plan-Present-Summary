@@ -39,3 +39,18 @@
 .milestone-activity-bar.critical{outline:2px solid rgba(212,74,85,.32);background:#d44a55}
 
 .gantt-start-marker{position:absolute;top:2px;transform:translateX(-50%);z-index:6;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid #f59e0b;filter:drop-shadow(0 1px 0 rgba(0,0,0,.16));pointer-events:none}.gantt-start-marker.critical{filter:drop-shadow(0 0 2px rgba(212,74,85,.95)) drop-shadow(0 1px 0 rgba(0,0,0,.16))}.milestone-start-marker{position:absolute;top:3px;transform:translateX(-50%);z-index:6;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid #f59e0b;filter:drop-shadow(0 1px 0 rgba(0,0,0,.16));pointer-events:none}.milestone-start-marker.critical{filter:drop-shadow(0 0 2px rgba(212,74,85,.95)) drop-shadow(0 1px 0 rgba(0,0,0,.16))}
+
+
+/* v2.0.6 progressive milestone disclosure */
+.portfolio-ms-label.compact{width:76px;max-width:76px;font-size:8.8px;line-height:1.02;padding:1px 2px}
+.portfolio-ms-label.compact b{font-size:8.8px}
+.portfolio-ms-label.compact small{font-size:7.8px;margin-top:1px}
+.portfolio-child-row[style*="--child-row-height"]{min-height:var(--child-row-height,42px)}
+.portfolio-child-title{min-height:var(--child-row-height,42px)}
+.portfolio-child-track{min-height:var(--child-row-height,42px)}
+.portfolio-child-track .portfolio-ms-stem{z-index:3}
+.portfolio-child-track .portfolio-milestone{z-index:5}
+.portfolio-child-track .portfolio-ms-label{z-index:6;background:transparent}
+.portfolio-child-track .portfolio-phase{z-index:2}
+.milestone-row-label{pointer-events:none}
+.portfolio-child-track.milestone-track .milestone-activity-bar{top:auto;bottom:9px;transform:none;height:8px}

@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.5 — Integrated Control Tower
+# Range Operation Platform v2.0.6 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -113,3 +113,12 @@ The browser storage key remains unchanged. Existing projects, activities, dashbo
 - Orange start triangles are preserved at the planned start of every timeline item/milestone in Dashboard detail rows and Detail Plan Gantt.
 - Duration activities keep their active bar while also showing the orange start marker.
 - Updated stacking so weekend shading never obscures Active Phase bars, milestone markers, or draggable Gantt bars.
+
+
+## v2.0.6
+- Dashboard hierarchy now uses progressive milestone disclosure.
+- A collapsed Project shows every plan-item start as an orange triangle with milestone/activity code and planned-start date on the Project row.
+- A collapsed Task shows the Task's milestones on the Task row; expanding the Task moves the detail down to Sub-Task rows.
+- A collapsed Sub-Task shows its milestones on the Sub-Task row; expanding it reveals individual Milestone/Activity rows.
+- Individual Milestone/Activity rows retain the orange start triangle and timeline label at the planned-start position.
+- Milestone labels continue using collision levels so collapsed summary rows remain readable.
