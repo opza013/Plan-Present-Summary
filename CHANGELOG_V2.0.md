@@ -1,3 +1,6 @@
+## v2.0.5
+- Weekend diagonal bands and start triangles.
+
 
 ## v2.0.4
 - Dashboard Month / Week / Day timeline header now remains visible while vertically scrolling through project, task, sub-task and milestone rows.

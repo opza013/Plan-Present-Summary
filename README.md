@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.4 — Integrated Control Tower
+# Range Operation Platform v2.0.5 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -105,3 +105,11 @@ The browser storage key remains unchanged. Existing projects, activities, dashbo
 - Sticky Month / Week / Day dashboard header during vertical scrolling.
 - Horizontal timeline position remains synchronized in the sticky header.
 - Weekend is indicated with solid grey vertical lines instead of diagonal shading across Gantt views.
+
+
+## v2.0.5
+- Weekend columns in Dashboard and Detail Plan Gantt now use grey diagonal hatch bands across the full vertical timeline instead of thin solid lines.
+- Weekend bands remain visible in Day, Week and Month time scales.
+- Orange start triangles are preserved at the planned start of every timeline item/milestone in Dashboard detail rows and Detail Plan Gantt.
+- Duration activities keep their active bar while also showing the orange start marker.
+- Updated stacking so weekend shading never obscures Active Phase bars, milestone markers, or draggable Gantt bars.
