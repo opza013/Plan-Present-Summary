@@ -60,3 +60,67 @@
 /* Detail Plan: bar top 14px + height 20px = lower edge 34px; triangle height 12px -> top 22px. */
 .gantt-start-marker{top:22px}
 /* Dashboard marker positions are calculated from each row's active-bar bottom offset. */
+
+/* v2.0.9 — hard baseline lock: milestone lower edge = active-bar lower edge */
+/* One baseline variable per dashboard track. This removes row-height/top-position drift. */
+.portfolio-track{--active-bar-bottom:12px}
+.portfolio-child-track{--active-bar-bottom:9px}
+.portfolio-child-track.task-track{--active-bar-bottom:10px}
+.portfolio-child-track.milestone-track{--active-bar-bottom:9px}
+
+/* Active bars and activity-duration bars use the same baseline source. */
+.portfolio-track .portfolio-phase,
+.portfolio-child-track .portfolio-phase{bottom:var(--active-bar-bottom)!important}
+.portfolio-child-track.milestone-track .milestone-activity-bar{bottom:var(--active-bar-bottom)!important}
+
+/* Use a real 20x18 triangle box instead of CSS border geometry.
+   Its physical lower edge can now be locked directly to the bar baseline. */
+.portfolio-milestone{
+  top:auto!important;
+  bottom:var(--active-bar-bottom)!important;
+  width:20px!important;
+  height:18px!important;
+  border:0!important;
+  background:#f59e0b!important;
+  clip-path:polygon(50% 0,100% 100%,0 100%);
+  transform:translateX(-50%);
+}
+
+/* Detail Plan uses the same physical-box approach: bar lower edge = 34px. */
+.gantt-start-marker{
+  top:22px!important;
+  width:14px!important;
+  height:12px!important;
+  border:0!important;
+  background:#f59e0b!important;
+  clip-path:polygon(50% 0,100% 100%,0 100%);
+  transform:translateX(-50%);
+}
+
+/* v2.0.10 — Dashboard freeze panes: keep key details visible while scrolling timeline */
+.portfolio-gantt-wrap{position:relative}
+.portfolio-left-head{position:sticky;left:0;z-index:15;background:#fff;box-shadow:6px 0 10px -10px rgba(30,49,90,.55)}
+
+/* Freeze the five key-detail columns on every project row. */
+.portfolio-row>.portfolio-event{position:sticky;left:0;z-index:10;background:#fff}
+.portfolio-row>.portfolio-format{position:sticky;left:140px;z-index:10;background:#fff}
+.portfolio-row>.portfolio-process{position:sticky;left:245px;z-index:10;background:#fff}
+.portfolio-row>.portfolio-live{position:sticky;left:545px;z-index:10;background:#fff}
+.portfolio-row>.portfolio-status{position:sticky;left:635px;z-index:11;background:#fff;box-shadow:6px 0 10px -10px rgba(30,49,90,.6)}
+
+/* Keep hierarchy labels aligned under the Project column while the timeline scrolls. */
+.portfolio-child-row>.portfolio-child-spacer:nth-child(1){position:sticky;left:0;z-index:9;background:inherit}
+.portfolio-child-row>.portfolio-child-spacer:nth-child(2){position:sticky;left:140px;z-index:9;background:inherit}
+.portfolio-child-row>.portfolio-child-title{position:sticky;left:245px;z-index:10}
+.portfolio-child-row>.portfolio-child-meta-blank:nth-child(4){position:sticky;left:545px;z-index:9;background:inherit}
+.portfolio-child-row>.portfolio-child-meta-blank:nth-child(5){position:sticky;left:635px;z-index:10;background:inherit;box-shadow:6px 0 10px -10px rgba(30,49,90,.55)}
+
+/* Freeze grouped Section/Sub-section names as one left pane. */
+.portfolio-section-title,.portfolio-subsection-title{position:sticky;left:0;z-index:12;background:inherit;box-shadow:6px 0 10px -10px rgba(30,49,90,.48)}
+
+/* The cloned vertical sticky header keeps Key Detail fixed while only timeline bands move horizontally. */
+.portfolio-sticky-shell .portfolio-left-head{position:sticky;left:0;z-index:20;background:#fff}
+.portfolio-sticky-shell .portfolio-time-head{will-change:transform;z-index:2}
+
+/* Strong visual divider for the frozen pane without adding clutter. */
+.portfolio-status,.portfolio-child-row>.portfolio-child-meta-blank:nth-child(5),.portfolio-left-head{border-right:1px solid #aeb8c6}

@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.8 — Integrated Control Tower
+# Range Operation Platform v2.0.10 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -126,3 +126,17 @@ The browser storage key remains unchanged. Existing projects, activities, dashbo
 
 ## v2.0.8
 Milestone/start triangle baselines are aligned with the lower edge of the active bar in every Gantt/Timeline view.
+
+
+## v2.0.9
+- Fixed remaining milestone triangle baseline drift in Dashboard rows with different dynamic heights.
+- Active Phase bars and orange milestone triangles now share one CSS bottom-baseline variable per row type.
+- Replaced border-based dashboard triangles with fixed-size clipped triangles, so their physical lower edge is exact.
+- Applied the same fixed-shape alignment approach to Detail Plan start markers.
+
+
+## v2.0.10
+- Dashboard now uses freeze panes for Event Type, Format, Project, Live week and Status while horizontally scrolling the milestone timeline.
+- Vertical sticky header keeps both key-detail column headers and Month/Week/Day bands visible while scrolling down.
+- Task/Sub-Task/Milestone hierarchy labels remain anchored under Project while the timeline scrolls horizontally.
+- Section and Sub-section labels are frozen with the left key-detail pane.

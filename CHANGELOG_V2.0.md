@@ -79,3 +79,15 @@
 - Aligned the lower edge of every orange milestone/start triangle with the lower edge of the active bar shown on the same row.
 - Applied consistently across Dashboard Project, Task, Sub-Task, Milestone/Activity rows and Detail Plan Gantt.
 - Preserved milestone collision levels, stems, hierarchy, zoom and time-scale behavior.
+
+
+## v2.0.9
+- Hard-locked milestone marker lower edges to the active-bar lower edge using a shared baseline variable.
+- Removed row-height-dependent marker drift across Project, Task, Sub-Task and Milestone rows.
+- Converted marker geometry to fixed-size clip-path triangles for pixel-stable alignment.
+
+
+## v2.0.10
+- Added Dashboard freeze-pane behavior for key detail columns during left/right timeline scrolling.
+- Sticky Dashboard header now preserves key-detail headers while Month/Week/Day bands remain synchronized with horizontal scroll.
+- Hierarchy and grouped section labels stay visible as users inspect distant milestones.
