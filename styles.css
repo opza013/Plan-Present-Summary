@@ -22,3 +22,6 @@
 
 /* v2.0.1 Dashboard Project → Task → Sub-Task hierarchy */
 .portfolio-child-row.task-row{background:#f5f8fc;border-bottom:1px solid #d9e2ec}.portfolio-child-row.subtask-row{background:#fbfcfe}.portfolio-child-title.task{padding-left:18px;align-items:flex-start}.portfolio-child-title.task .phasing-name{color:#244d72;font-size:11.5px}.portfolio-child-title.subtask{padding-left:46px}.portfolio-child-title.subtask::before{left:30px;width:11px}.portfolio-child-title .task-toggle{flex:0 0 auto;margin-top:-1px}.portfolio-child-track.task-track{background-color:#f7faff}.portfolio-child-track.task-track .portfolio-phase{height:8px;bottom:10px;opacity:.62;background:#5d83aa}.portfolio-child-track.task-track .portfolio-phase::after{border-top-width:4px;border-bottom-width:4px;border-left-width:7px;right:-7px}.hierarchy-branch{color:#9aa9b8;font-weight:800;line-height:16px}.project-toggle{vertical-align:middle}.dashboard-control-actions .btn.sm{white-space:nowrap}
+
+/* v2.0.2 — Sub-Task expand/collapse */
+.portfolio-child-title .subtask-toggle{flex:0 0 auto;margin-top:-1px}.portfolio-child-row.subtask-row.collapsed .portfolio-child-title.subtask{background:#f8fafc}.portfolio-child-row.subtask-row.collapsed .portfolio-child-track .portfolio-phase{opacity:.62}.portfolio-child-row.subtask-row.collapsed .portfolio-child-badge{background:#f7f9fc}

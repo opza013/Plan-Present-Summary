@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.1 — Integrated Control Tower
+# Range Operation Platform v2.0.2 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -83,3 +83,10 @@ The browser storage key remains unchanged. Existing projects, activities, dashbo
 - Expand All / Collapse All controls are available at Dashboard level.
 - Task rows show their aggregate active phase; Sub-Task rows show phase bars and milestone detail.
 - Collapse state persists in the dashboard state without changing project planning data.
+
+
+## v2.0.2
+- Added +/− expand/collapse control at Sub-Task level on Dashboard.
+- Collapsed Sub-Task keeps its phase bar visible while hiding milestone labels, connector lines and triangles.
+- Expanded Sub-Task restores the full milestone timeline.
+- Expand All / Collapse All now also manages Project, Task and Sub-Task hierarchy states.

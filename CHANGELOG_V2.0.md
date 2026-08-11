@@ -42,3 +42,8 @@
 - Added hierarchical Dashboard drill-down: Project → Task → Sub-Task.
 - Added per-Project and per-Task expand/collapse controls.
 - Added Expand All / Collapse All commands.
+
+
+## 2.0.2
+- Dashboard hierarchy now supports Project → Task → Sub-Task expand/collapse.
+- Sub-Task collapse hides milestone detail while preserving phase duration context.
