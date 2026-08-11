@@ -33,3 +33,9 @@ A plan item may also be marked as Critical Path or Primary Live Milestone.
 
 ### Dashboard hierarchy v2.0.3
 Dashboard rendering supports Project → Task → Sub-Task → Milestone/Activity. Structural collapse state is persisted under `dashboard.collapsedProjects`, `collapsedTasks`, and `collapsedSubTasks`; leaf detail expansion is persisted under `dashboard.expandedMilestones`.
+
+
+## Dashboard interaction layer (v2.0.11)
+- Dashboard timeline viewport supports mouse hold-and-drag panning. Horizontal movement changes the timeline scroll position; vertical movement scrolls the project hierarchy.
+- Milestone triangles carry activity IDs and open a fixed right-side detail drawer without changing the planning model.
+- Dashboard Live Week display aggregates distinct live-driver weeks from all plan items under a project; Primary Live remains the principal live-driver field.

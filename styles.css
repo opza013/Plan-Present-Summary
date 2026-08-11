@@ -124,3 +124,62 @@
 
 /* Strong visual divider for the frozen pane without adding clutter. */
 .portfolio-status,.portfolio-child-row>.portfolio-child-meta-blank:nth-child(5),.portfolio-left-head{border-right:1px solid #aeb8c6}
+
+/* v2.0.11 — Dashboard free-pan, milestone detail drawer and multi Live Week */
+.portfolio-axis,.portfolio-row{grid-template-columns:140px 105px 300px 130px 86px auto}
+.portfolio-left-head{grid-template-columns:140px 105px 300px 130px 86px}
+.portfolio-child-row{grid-template-columns:140px 105px 300px 130px 86px auto}
+.portfolio-left-head>button{white-space:nowrap;min-width:0}
+.portfolio-left-head>.live-week-header{white-space:nowrap;display:flex;flex-wrap:nowrap;align-items:center;gap:5px}
+.portfolio-left-head>.live-week-header>span:first-child{white-space:nowrap}
+.portfolio-live{white-space:normal;line-height:1.22;font-size:11px;overflow-wrap:normal;word-break:keep-all}
+
+/* Updated freeze-pane offsets for the wider Live Week column. */
+.portfolio-row>.portfolio-event{left:0}
+.portfolio-row>.portfolio-format{left:140px}
+.portfolio-row>.portfolio-process{left:245px}
+.portfolio-row>.portfolio-live{left:545px}
+.portfolio-row>.portfolio-status{left:675px}
+.portfolio-child-row>.portfolio-child-spacer:nth-child(1){left:0}
+.portfolio-child-row>.portfolio-child-spacer:nth-child(2){left:140px}
+.portfolio-child-row>.portfolio-child-title{left:245px}
+.portfolio-child-row>.portfolio-child-meta-blank:nth-child(4){left:545px}
+.portfolio-child-row>.portfolio-child-meta-blank:nth-child(5){left:675px}
+
+/* Grab-to-pan is available on the timeline canvas, not on controls/markers. */
+.portfolio-time-head,.portfolio-track,.portfolio-child-track,.portfolio-section-time,.portfolio-subsection-time{cursor:grab}
+.portfolio-gantt-wrap.pan-holding,.portfolio-gantt-wrap.is-panning{user-select:none}
+.portfolio-gantt-wrap.is-panning,.portfolio-gantt-wrap.is-panning .portfolio-time-head,.portfolio-gantt-wrap.is-panning .portfolio-track,.portfolio-gantt-wrap.is-panning .portfolio-child-track,.portfolio-gantt-wrap.is-panning .portfolio-section-time,.portfolio-gantt-wrap.is-panning .portfolio-subsection-time{cursor:grabbing!important}
+.dashboard-milestone-trigger{cursor:pointer;outline:none}
+.dashboard-milestone-trigger:hover,.dashboard-milestone-trigger:focus-visible{filter:drop-shadow(0 0 3px rgba(245,158,11,.9)) drop-shadow(0 1px 0 rgba(0,0,0,.18));transform:translateX(-50%) scale(1.08)}
+
+/* OnePlan-style non-blocking milestone drawer on the right side of the dashboard. */
+.dashboard-milestone-shade{position:fixed;inset:64px 0 0;background:rgba(8,22,40,.06);z-index:43;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.dashboard-milestone-shade.active{opacity:1}
+.dashboard-milestone-panel{position:fixed;z-index:44;top:76px;right:14px;bottom:14px;width:min(410px,calc(100vw - 28px));background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:-14px 8px 32px rgba(15,34,54,.22);transform:translateX(calc(100% + 28px));transition:transform .2s ease;display:flex;flex-direction:column;overflow:hidden}
+.dashboard-milestone-panel.active{transform:translateX(0)}
+.dashboard-milestone-panel-head{display:flex;align-items:flex-start;gap:10px;padding:14px 15px;border-bottom:1px solid var(--line);background:#f8fafc}
+.dashboard-panel-code{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:28px;padding:5px 8px;border-radius:7px;color:#fff;font-size:10px;font-weight:850;line-height:1.1;text-align:center}
+.dashboard-panel-title{min-width:0;flex:1}
+.dashboard-panel-title h3{font-size:15px;margin:1px 0 3px;line-height:1.25}
+.dashboard-panel-close{border:0;background:#eef2f6;width:31px;height:31px;border-radius:8px;cursor:pointer;font-size:15px;flex-shrink:0}
+.dashboard-milestone-panel-body{padding:13px 15px 16px;overflow:auto;min-height:0}
+.dashboard-panel-path{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:0 0 10px;padding:7px 9px;border-radius:7px;background:#f8fafc;border:1px solid var(--line);font-size:10px;color:var(--muted)}
+.dashboard-panel-path b{color:var(--text)}
+.dashboard-panel-status{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:11px}
+.dashboard-detail-tag{display:inline-flex;padding:3px 7px;border-radius:999px;font-size:9px;font-weight:800;background:#eef2f7;color:#48586b}
+.dashboard-detail-tag.live{background:#e8f7f0;color:#13754b}
+.dashboard-detail-tag.critical{background:#fdecee;color:#aa2836}
+.dashboard-panel-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:14px}
+.dashboard-panel-info{border:1px solid var(--line);border-radius:8px;padding:8px 9px;background:#fff;min-width:0}
+.dashboard-panel-info>span{display:block;font-size:9px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.25px;margin-bottom:3px}
+.dashboard-panel-info>b{display:block;font-size:11px;line-height:1.35;overflow-wrap:anywhere}
+.dashboard-panel-section{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:850;margin:4px 0 7px}
+.dashboard-panel-steps{display:flex;flex-direction:column;gap:6px}
+.dashboard-panel-step{border:1px solid var(--line);border-radius:8px;padding:8px 9px;background:#fff;display:grid;grid-template-columns:20px 1fr;gap:7px;align-items:flex-start}
+.dashboard-panel-step.overdue{border-color:#f5b8b8;background:#fff8f8}
+.dashboard-panel-step-index{display:inline-flex;width:18px;height:18px;align-items:center;justify-content:center;border-radius:50%;background:#eef4fb;color:var(--primary);font-size:9px;font-weight:850}
+.dashboard-panel-step b{font-size:11px;line-height:1.35}
+.dashboard-panel-empty{border:1px dashed #cbd5e1;border-radius:8px;padding:10px;color:var(--muted);font-size:10.5px;background:#fbfdff}
+.dashboard-panel-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
+@media(max-width:700px){.dashboard-milestone-panel{top:64px;right:0;bottom:0;width:94%;border-radius:0}.dashboard-panel-info-grid{grid-template-columns:1fr 1fr}}

@@ -91,3 +91,11 @@
 - Added Dashboard freeze-pane behavior for key detail columns during left/right timeline scrolling.
 - Sticky Dashboard header now preserves key-detail headers while Month/Week/Day bands remain synchronized with horizontal scroll.
 - Hierarchy and grouped section labels stay visible as users inspect distant milestones.
+
+
+## v2.0.11
+- Added free mouse drag panning across Dashboard timeline in four directions.
+- Orange milestone triangles now open a right-side milestone detail drawer inspired by OnePlan Detail Plan.
+- Added milestone detail fields and Next Steps plus direct Edit/Open Detail Plan actions.
+- Dashboard Live Week header no longer wraps.
+- Dashboard Project rows display all distinct Live Weeks contained in the project.

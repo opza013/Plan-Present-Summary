@@ -30,3 +30,11 @@ Validated locally on 2026-08-11:
 - Dashboard Task baseline: 10px from row bottom for both bar and marker.
 - Dashboard Sub-Task/Milestone baseline: 9px from row bottom for both bar and marker.
 - Detail Plan marker lower edge remains aligned with the 34px Gantt-bar lower edge.
+
+
+## v2.0.11 verification
+- `node --check app.js`: PASS
+- `node --check server.js`: PASS
+- `/api/health`: PASS, version 2.0.11
+- VM render smoke test: Dashboard Gantt renders interactive milestone markers, right-side detail drawer shell, non-wrapping Live Week header, and updated 761px freeze pane.
+- Multi-live-week smoke test: projects with multiple live-driver milestones return multiple distinct week labels (for example W37 · W39).

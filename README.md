@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.10 — Integrated Control Tower
+# Range Operation Platform v2.0.11 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -140,3 +140,11 @@ Milestone/start triangle baselines are aligned with the lower edge of the active
 - Vertical sticky header keeps both key-detail column headers and Month/Week/Day bands visible while scrolling down.
 - Task/Sub-Task/Milestone hierarchy labels remain anchored under Project while the timeline scrolls horizontally.
 - Section and Sub-section labels are frozen with the left key-detail pane.
+
+
+## v2.0.11
+- Dashboard timeline supports mouse hold-and-drag panning: drag left/right to move across the timeline and drag up/down to move through the project rows.
+- Orange milestone triangles are interactive. Clicking a triangle opens a OnePlan-style right-side detail drawer with Project → Task → Sub-Task path, status, dates, PIC, responsible unit, flags and Next Steps.
+- Milestone drawer provides Edit Item and Open Detail Plan actions.
+- Dashboard `Live Week` header is forced to one line.
+- Each Project row now shows every distinct Live Week found under that project, while the existing Primary Live logic remains available as the main live driver.
