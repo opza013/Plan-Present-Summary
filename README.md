@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.2 — Integrated Control Tower
+# Range Operation Platform v2.0.4 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -90,3 +90,18 @@ The browser storage key remains unchanged. Existing projects, activities, dashbo
 - Collapsed Sub-Task keeps its phase bar visible while hiding milestone labels, connector lines and triangles.
 - Expanded Sub-Task restores the full milestone timeline.
 - Expand All / Collapse All now also manages Project, Task and Sub-Task hierarchy states.
+
+
+## v2.0.4
+- Fixed Dashboard Task/Sub-Task +/- controls that could disappear because inline handler arguments broke HTML attributes for real task/sub-task names.
+- Replaced Task/Sub-Task inline toggle arguments with safe data attributes and delegated initialization.
+- Added a fourth Dashboard hierarchy level: Project → Task → Sub-Task → Milestone/Activity.
+- Sub-Task +/- now expands or collapses its Milestone/Activity rows.
+- Each Milestone/Activity row has its own +/- to show or hide dates, status, PIC, Primary Live and Critical Path details.
+- Expand All / Collapse All now includes Milestone detail rows.
+
+
+### v2.0.4 UI timeline improvements
+- Sticky Month / Week / Day dashboard header during vertical scrolling.
+- Horizontal timeline position remains synchronized in the sticky header.
+- Weekend is indicated with solid grey vertical lines instead of diagonal shading across Gantt views.

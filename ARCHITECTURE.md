@@ -29,3 +29,7 @@ Project
   - Milestone (point / gate)
 
 A plan item may also be marked as Critical Path or Primary Live Milestone.
+
+
+### Dashboard hierarchy v2.0.3
+Dashboard rendering supports Project → Task → Sub-Task → Milestone/Activity. Structural collapse state is persisted under `dashboard.collapsedProjects`, `collapsedTasks`, and `collapsedSubTasks`; leaf detail expansion is persisted under `dashboard.expandedMilestones`.

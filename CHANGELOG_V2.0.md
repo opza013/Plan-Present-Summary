@@ -1,3 +1,9 @@
+
+## v2.0.4
+- Dashboard Month / Week / Day timeline header now remains visible while vertically scrolling through project, task, sub-task and milestone rows.
+- Sticky dashboard timeline header stays synchronized with horizontal Gantt scrolling.
+- Weekend treatment changed from diagonal hatching to solid grey vertical lines.
+- Solid weekend lines are applied across Dashboard project/task/sub-task/milestone timelines and Detail Plan Gantt rows in Day view.
 # Range Operation Platform v2.0.0
 
 ## Consolidated roadmap v1.4 → v2.0
@@ -47,3 +53,9 @@
 ## 2.0.2
 - Dashboard hierarchy now supports Project → Task → Sub-Task expand/collapse.
 - Sub-Task collapse hides milestone detail while preserving phase duration context.
+
+
+## 2.0.3
+- Fixed missing Task/Sub-Task expand/collapse controls.
+- Added Milestone/Activity child rows with independent +/- details.
+- Dashboard hierarchy is now Project → Task → Sub-Task → Milestone/Activity.
