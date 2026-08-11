@@ -68,3 +68,9 @@
 - Progressive Project → Task → Sub-Task → Milestone disclosure on Dashboard.
 - Collapsed hierarchy rows retain orange start markers and milestone labels/dates.
 - Expanded rows transfer milestone detail to the next hierarchy level to avoid duplicate visual clutter.
+
+
+## v2.0.7
+- Weekend hatch is lighter/thinner and shown only in Day view.
+- Week and Month views no longer render weekend shading.
+- Applied consistently to Dashboard and Detail Plan Gantt.

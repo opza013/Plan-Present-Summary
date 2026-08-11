@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.6 — Integrated Control Tower
+# Range Operation Platform v2.0.7 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
