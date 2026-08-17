@@ -52,3 +52,9 @@ Dashboard rendering supports Project → Task → Sub-Task → Milestone/Activit
 - Workstream and Milestone are required; Task/Sub-Task are optional free-form planning detail.
 - Visible bar label resolves in this order: Sub-Task → Task → Milestone.
 - Orange timeline triangle is a milestone semantic marker and is rendered only for Item Type = Milestone at Planned Start.
+
+## v2.0.20 NWT responsibility mapping
+- `masters.nwts[]`: ordered NWT definitions `{name, units[]}`.
+- `masters.milestones[].nwt`: links a Key Milestone to one NWT definition.
+- Detail Plan resolves allowed Responsible Units through `milestoneResponsibleUnits(key)`; NWT mapping is authoritative when configured, with legacy milestone units retained only for backward compatibility.
+- Plan Item responsibilities remain `{unit,pic}` and can contain multiple assignments selected from the NWT-derived allowed list.

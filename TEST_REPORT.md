@@ -79,12 +79,16 @@ Validated locally on 2026-08-11:
 - Verified in-use Master with no alternative replacement is blocked from deletion.
 - Seed-data replacement regression: Milestone 18/18 references reassigned, Workstream 223/223, Responsible Unit 269/269; old-reference counts returned to zero before deletion.
 
-### v2.0.19 Gantt typography
+### v2.0.20 Gantt typography
 - Milestone labels: bold gray.
 - Non-milestone bar labels: regular gray.
 - Dashboard and Detail Plan markup/classes verified.
 
-### v2.0.19 white Gantt bar typography
+### v2.0.20 white Gantt bar typography
 - Verified Milestone bar text uses bold white.
 - Verified Task / Sub-Task / Activity bar text uses regular white.
 - Verified external milestone labels remain gray on the white timeline.
+
+### v2.0.20 NWT / Responsible Unit
+- NWT Master data migration present.
+- Key Milestone→NWT mapping and Detail Plan Responsible Unit source validated by static/runtime checks.

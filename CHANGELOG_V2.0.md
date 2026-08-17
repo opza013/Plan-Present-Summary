@@ -142,12 +142,18 @@
 - The same controlled replacement flow is available for Workstream and Responsible Unit Masters.
 - Delete dialog continues to show every current reference and blocks deletion when no replacement Master exists.
 - Replacement preserves Plan Item dates, status, PIC names, Task and Sub-Task; Responsible Unit replacement deduplicates unit assignments.
-## v2.0.19
+## v2.0.20
 - Gantt typography standardized: Milestone text uses bold gray; Task/Sub-Task/Activity text uses regular gray.
 - Applied to Dashboard activity bars, Dashboard milestone labels, and Detail Plan Gantt bars.
 
 
-## v2.0.19 — Gantt bar font color
+## v2.0.20 — Gantt bar font color
 - Gantt bar text changed from gray to white.
 - Milestone remains bold; Task / Sub-Task / Activity remain regular weight.
 - External milestone labels above orange triangles remain gray.
+
+## v2.0.20
+- Added NWT Master with ordered, editable NWT entries and Responsible Unit mapping.
+- Key Milestone Master now links to NWT; Responsible Unit choices in Detail Plan are sourced from the selected Milestone's NWT configuration.
+- Edit Plan Item supports selecting one or more allowed Responsible Units with PIC names.
+- Master usage/replace/delete flow now includes NWT and NWT→Responsible Unit references.

@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.19 — Integrated Control Tower
+# Range Operation Platform v2.0.20 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -178,7 +178,10 @@ Milestone/start triangle baselines are aligned with the lower edge of the active
 ## v2.0.17 — Replace before Master deletion
 When deleting an in-use Workstream, Key Milestone, or Responsible Unit, the deletion dialog lists all references and allows the user to replace them with another Master value before deleting the old value. For Key Milestones, Plan Items are reassigned to the selected Milestone while operational fields such as dates, status, PIC, Task and Sub-Task remain unchanged.
 
-## v2.0.19 — Gantt typography
+## v2.0.20 — Gantt typography
 - Gantt bar font color changed to white. Milestone remains bold; other bar labels remain regular weight.
 - Milestone text in Gantt uses bold gray.
 - Task, Sub-Task and Activity text in Gantt uses regular gray.
+
+### NWT → Responsible Unit (v2.0.20)
+Configure each NWT in **Master Data → NWT Master** and select its allowed Responsible Units. Link each **Key Milestone Master** to an NWT. In **Detail Plan → Edit Plan Item**, the Responsible Unit selector is then populated from that NWT mapping.
