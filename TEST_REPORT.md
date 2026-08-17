@@ -68,3 +68,13 @@ Validated locally on 2026-08-11:
 - Verified reference scanning for Workstream, Key Milestone, and Responsible Unit Master.
 - Verified used items are blocked from deletion and usage locations are displayed.
 - Verified unused items can be deleted after confirmation.
+
+
+### v2.0.17 Master replace-before-delete
+- Verified JavaScript syntax and server syntax.
+- Verified replacement workflow exists for milestones, workstreams and units.
+- Verified Milestone replacement updates Plan Item milestone keys before deleting the old Master.
+- Verified Workstream replacement updates Plan Item workstream references.
+- Verified Responsible Unit replacement updates Milestone defaults and Plan Item responsibility rows with duplicate-unit merge.
+- Verified in-use Master with no alternative replacement is blocked from deletion.
+- Seed-data replacement regression: Milestone 18/18 references reassigned, Workstream 223/223, Responsible Unit 269/269; old-reference counts returned to zero before deletion.

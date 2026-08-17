@@ -134,3 +134,11 @@
 - Responsible Unit usage lists both Milestone Master defaults and Plan Item PIC/responsibility references.
 - Used Master Data is protected from deletion until all references are removed or changed.
 - Unused Master Data shows an explicit safe-to-delete confirmation.
+
+
+## v2.0.17
+- Added Replace-before-Delete workflow for Master Data.
+- In-use Key Milestone can be reassigned to another Milestone directly from the delete dialog before the old Milestone is deleted.
+- The same controlled replacement flow is available for Workstream and Responsible Unit Masters.
+- Delete dialog continues to show every current reference and blocks deletion when no replacement Master exists.
+- Replacement preserves Plan Item dates, status, PIC names, Task and Sub-Task; Responsible Unit replacement deduplicates unit assignments.

@@ -1,5 +1,5 @@
 const STORAGE_KEY='range-plan-presenter-v1';
-const APP_VERSION='2.0.16';
+const APP_VERSION='2.0.17';
 const TOKEN_KEY='range-operation-team-token';
 const USER_KEY='range-operation-team-user';
 const STATUS=['Upcoming','InProgress','Completed','AtRisk','Delayed','OnHold'];
@@ -340,7 +340,64 @@ function collectMasterUsages(type,i){
   return uses;
 }
 function masterUsageRows(usages){return usages.map((u,n)=>`<tr><td>${n+1}</td><td><b>${esc(u.source)}</b></td><td>${esc(u.project)}</td><td>${esc(u.path)}</td><td>${esc(u.detail)}</td></tr>`).join('')}
-function requestDeleteMaster(type,i){const label=masterDeleteLabel(type,i),usages=collectMasterUsages(type,i),used=usages.length>0;showModal(`<div class="modal-head"><h2>${used?'Master Data is in use':'Delete Master Data'}</h2><button class="btn sm" onclick="closeModal()">×</button></div><div class="modal-body"><div class="section-title">${esc(label)}</div>${used?`<div class="master-usage-warning"><b>Cannot delete yet.</b> This Master Data is referenced in <b>${usages.length}</b> location${usages.length===1?'':'s'}. Remove or change those references first.</div><div class="master-usage-table"><table class="table"><thead><tr><th>#</th><th>Used As</th><th>Project</th><th>Location</th><th>Detail</th></tr></thead><tbody>${masterUsageRows(usages)}</tbody></table></div>`:`<div class="small">No current references were found for this Master Data. It can be deleted safely.</div>`}</div><div class="modal-foot"><button class="btn" onclick="closeModal()">${used?'Close':'Cancel'}</button>${used?'':`<button class="btn danger" onclick="confirmDeleteMaster('${esc(type)}',${i})">Delete</button>`}</div>`)}
+function masterReplacementOptions(type,i){
+  const arr=state.masters[type]||[];
+  return arr.map((item,index)=>({item,index})).filter(x=>x.index!==i).map(x=>({
+    index:x.index,
+    label:type==='milestones'?`${x.item.key} · ${x.item.name}`:String(x.item||'')
+  }));
+}
+function masterReplacementTypeLabel(type){return type==='milestones'?'Milestone':type==='workstreams'?'Workstream':'Responsible Unit'}
+function replaceMasterReferences(type,fromIndex,toIndex){
+  const arr=state.masters[type]||[],from=arr[fromIndex],to=arr[toIndex];
+  if(!from||!to||fromIndex===toIndex)return 0;
+  let changed=0;
+  if(type==='workstreams'){
+    (state.projects||[]).forEach(p=>(p.activities||[]).forEach(a=>{
+      if(workstreamOf(a)===from){a.workstream=to;changed++}
+    }));
+  }else if(type==='milestones'){
+    (state.projects||[]).forEach(p=>(p.activities||[]).forEach(a=>{
+      if(a.key===from.key){a.key=to.key;changed++}
+    }));
+  }else if(type==='units'){
+    (state.masters.milestones||[]).forEach(m=>{
+      if((m.units||[]).includes(from)){
+        m.units=[...new Set((m.units||[]).map(u=>u===from?to:u))];changed++
+      }
+    });
+    (state.projects||[]).forEach(p=>(p.activities||[]).forEach(a=>{
+      if(!(a.responsibilities||[]).some(r=>r.unit===from))return;
+      const merged=[];
+      (a.responsibilities||[]).forEach(r=>{
+        const unit=r.unit===from?to:r.unit;
+        const existing=merged.find(x=>x.unit===unit);
+        if(existing){
+          const pics=[existing.pic,r.pic].map(x=>String(x||'').trim()).filter(Boolean);
+          existing.pic=[...new Set(pics)].join(' / ');
+        }else merged.push({...r,unit});
+      });
+      a.responsibilities=merged;changed++
+    }));
+  }
+  return changed;
+}
+function requestDeleteMaster(type,i){
+  const label=masterDeleteLabel(type,i),usages=collectMasterUsages(type,i),used=usages.length>0,replacements=masterReplacementOptions(type,i),typeLabel=masterReplacementTypeLabel(type);
+  const replacementBlock=used?`<div class="master-replace-box"><div class="section-title">Replace before delete</div>${replacements.length?`<div class="ff"><label>Change all references to another ${esc(typeLabel)}</label><select id="masterReplacementIndex">${replacements.map(x=>`<option value="${x.index}">${esc(x.label)}</option>`).join('')}</select></div><div class="small">The current ${esc(typeLabel)} reference will be replaced in all locations listed below. Project dates, status, PIC names, Task and Sub-Task values are preserved.</div>`:`<div class="master-usage-warning"><b>No replacement available.</b> Add another ${esc(typeLabel)} in Master Data before deleting this item.</div>`}</div>`:'';
+  showModal(`<div class="modal-head"><h2>${used?'Replace & Delete Master Data':'Delete Master Data'}</h2><button class="btn sm" onclick="closeModal()">×</button></div><div class="modal-body"><div class="section-title">${esc(label)}</div>${used?`<div class="master-usage-warning">This Master Data is currently referenced in <b>${usages.length}</b> location${usages.length===1?'':'s'}. Review the usage, choose a replacement, then delete the old Master.</div>${replacementBlock}<div class="master-usage-table"><table class="table"><thead><tr><th>#</th><th>Used As</th><th>Project</th><th>Location</th><th>Detail</th></tr></thead><tbody>${masterUsageRows(usages)}</tbody></table></div>`:`<div class="small">No current references were found for this Master Data. It can be deleted safely.</div>`}</div><div class="modal-foot"><button class="btn" onclick="closeModal()">Cancel</button>${used?(replacements.length?`<button class="btn danger" onclick="replaceAndDeleteMaster('${esc(type)}',${i})">Replace References & Delete</button>`:''):`<button class="btn danger" onclick="confirmDeleteMaster('${esc(type)}',${i})">Delete</button>`}</div>`)
+}
+function replaceAndDeleteMaster(type,i){
+  const select=document.getElementById('masterReplacementIndex'),toIndex=Number(select?.value);
+  const arr=state.masters[type]||[],fromLabel=masterDeleteLabel(type,i),to=arr[toIndex];
+  if(!Number.isInteger(toIndex)||!to||toIndex===i)return alert('Please select a valid replacement.');
+  const toLabel=type==='milestones'?`${to.key} · ${to.name}`:String(to);
+  const usages=collectMasterUsages(type,i);
+  if(!confirm(`Replace ${usages.length} reference${usages.length===1?'':'s'} from “${fromLabel}” to “${toLabel}”, then permanently delete the old Master?`))return;
+  replaceMasterReferences(type,i,toIndex);
+  state.masters[type].splice(i,1);
+  save();closeModal();render();
+}
 function confirmDeleteMaster(type,i){if(!state.masters[type]?.[i])return closeModal();state.masters[type].splice(i,1);save();closeModal();render()}
 function deleteMaster(type,i){requestDeleteMaster(type,i)}
 function addMasterWorkstream(){const x=prompt('Workstream name');if(x&&!state.masters.workstreams.includes(x.trim())){state.masters.workstreams.push(x.trim());save();render()}}

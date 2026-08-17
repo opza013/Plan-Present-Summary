@@ -202,3 +202,10 @@
 .master-usage-table{max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:9px}
 .master-usage-table .table{min-width:780px}
 .master-usage-table .table td{font-size:12px}
+
+
+/* v2.0.17 — replace references before deleting Master Data */
+.master-replace-box{margin:0 0 12px;padding:11px 12px;border:1px solid #c9d7ea;border-radius:9px;background:#f7faff}
+.master-replace-box .section-title{margin-bottom:8px}
+.master-replace-box .ff{margin-bottom:7px}
+.master-replace-box select{width:100%}
