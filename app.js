@@ -1,5 +1,5 @@
 const STORAGE_KEY='range-plan-presenter-v1';
-const APP_VERSION='2.0.18';
+const APP_VERSION='2.0.19';
 const TOKEN_KEY='range-operation-team-token';
 const USER_KEY='range-operation-team-user';
 const STATUS=['Upcoming','InProgress','Completed','AtRisk','Delayed','OnHold'];

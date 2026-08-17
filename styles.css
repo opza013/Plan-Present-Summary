@@ -210,29 +210,29 @@
 .master-replace-box .ff{margin-bottom:7px}
 .master-replace-box select{width:100%}
 
-/* v2.0.18 — Gantt typography: Milestone bold gray; everything else regular gray */
+/* v2.0.19 — Gantt bar typography: Milestone bold white; everything else regular white */
 .gantt-font-milestone{
-  color:#667085!important;
+  color:#fff!important;
   font-weight:800!important;
 }
 .gantt-font-standard{
-  color:#667085!important;
+  color:#fff!important;
   font-weight:400!important;
 }
 .milestone-activity-bar>span.gantt-font-standard{
-  color:#667085!important;
+  color:#fff!important;
   font-weight:400!important;
-  text-shadow:none;
+  text-shadow:0 1px 1px rgba(0,0,0,.18);
 }
 .gantt-bar-text.gantt-font-milestone{
-  color:#667085!important;
+  color:#fff!important;
   font-weight:800!important;
 }
 .gantt-bar-text.gantt-font-standard{
-  color:#667085!important;
+  color:#fff!important;
   font-weight:400!important;
 }
-/* Orange-triangle milestone labels stay semantically Milestone typography. */
+/* Labels above orange milestone triangles stay gray for readability on the white timeline. */
 .portfolio-ms-label b,
 .portfolio-ms-label.compact b,
 .milestone-row-label b{
