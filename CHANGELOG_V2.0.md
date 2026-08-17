@@ -113,3 +113,8 @@
 - Made Task/Sub-Task optional.
 - Added Sub-Task → Task → Milestone bar-label fallback.
 - Restricted orange start triangles to Item Type = Milestone only.
+
+
+## v2.0.14
+- Fixed Detail Plan page rendering (`groupRow` runtime error).
+- Added drag-and-drop ordering across all Master Data lists.

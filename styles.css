@@ -187,3 +187,12 @@
 /* v2.0.13 — Plan-item bar labels; orange triangles are milestone-only. */
 .milestone-activity-bar{display:flex;align-items:center;padding:0 6px;overflow:hidden}
 .milestone-activity-bar>span{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:9px;font-weight:800;color:#fff;line-height:1}
+
+/* v2.0.14 — draggable master ordering */
+.master-draggable{cursor:grab;transition:background .12s ease,border-color .12s ease,opacity .12s ease}
+.master-draggable:active{cursor:grabbing}
+.master-draggable.dragging{opacity:.45;background:#eef4fb}
+.master-draggable.drag-over{background:#edf5ff;box-shadow:inset 0 2px 0 #3157d5}
+.master-main{display:flex;align-items:flex-start;gap:8px;min-width:0}
+.master-drag-handle{display:inline-flex;align-items:center;justify-content:center;width:20px;min-width:20px;height:24px;border-radius:5px;color:#8a97a8;font-size:15px;line-height:1;user-select:none}
+.master-draggable:hover .master-drag-handle{color:#3157d5;background:#eef2ff}

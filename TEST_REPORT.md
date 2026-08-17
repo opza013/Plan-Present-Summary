@@ -54,3 +54,11 @@ Validated locally on 2026-08-11:
 - Bar-label fallback helper: PASS
 - Milestone-only orange marker rendering: PASS
 - `/api/health` reports v2.0.13: PASS
+
+## v2.0.14 regression checks
+- `app.js` syntax: PASS
+- `server.js` syntax: PASS
+- Detail Plan runtime render: PASS
+- Detail Plan group modes (`Milestone`, `Workstream`, `Workstream → Task`, `Workstream → Task → Sub-Task`): PASS
+- Master Data draggable rows: PASS (all Workstream, Key Milestone and Responsible Unit rows)
+- `/api/health` reports v2.0.14: PASS
