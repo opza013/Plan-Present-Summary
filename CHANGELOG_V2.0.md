@@ -115,6 +115,22 @@
 - Restricted orange start triangles to Item Type = Milestone only.
 
 
-## v2.0.14
+## v2.0.15
 - Fixed Detail Plan page rendering (`groupRow` runtime error).
 - Added drag-and-drop ordering across all Master Data lists.
+
+## v2.0.15
+- Hardened Detail Plan navigation and rendering for legacy/incomplete browser or server data.
+- Added self-repair normalization for plan items, responsibilities, next steps, and dates.
+- Timeline now ignores undated items instead of allowing invalid dates to break/expand the Gantt.
+- Added Detail Plan render recovery with Repair data & Retry.
+- Replaced Workstream/Task/Sub-Task Add Item inline argument handlers with data attributes + event listeners.
+
+
+## v2.0.16
+- Master Data deletion now performs a reference scan before deletion.
+- Workstream usage lists every Project/Plan Item that references the Workstream.
+- Milestone usage lists every Project/Plan Item that uses the Milestone code.
+- Responsible Unit usage lists both Milestone Master defaults and Plan Item PIC/responsibility references.
+- Used Master Data is protected from deletion until all references are removed or changed.
+- Unused Master Data shows an explicit safe-to-delete confirmation.

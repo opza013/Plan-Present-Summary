@@ -55,10 +55,16 @@ Validated locally on 2026-08-11:
 - Milestone-only orange marker rendering: PASS
 - `/api/health` reports v2.0.13: PASS
 
-## v2.0.14 regression checks
+## v2.0.15 regression checks
 - `app.js` syntax: PASS
 - `server.js` syntax: PASS
 - Detail Plan runtime render: PASS
 - Detail Plan group modes (`Milestone`, `Workstream`, `Workstream → Task`, `Workstream → Task → Sub-Task`): PASS
 - Master Data draggable rows: PASS (all Workstream, Key Milestone and Responsible Unit rows)
-- `/api/health` reports v2.0.14: PASS
+- `/api/health` reports v2.0.15: PASS
+
+
+### v2.0.16 Master reference deletion
+- Verified reference scanning for Workstream, Key Milestone, and Responsible Unit Master.
+- Verified used items are blocked from deletion and usage locations are displayed.
+- Verified unused items can be deleted after confirmation.

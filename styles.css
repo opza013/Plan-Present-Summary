@@ -196,3 +196,9 @@
 .master-main{display:flex;align-items:flex-start;gap:8px;min-width:0}
 .master-drag-handle{display:inline-flex;align-items:center;justify-content:center;width:20px;min-width:20px;height:24px;border-radius:5px;color:#8a97a8;font-size:15px;line-height:1;user-select:none}
 .master-draggable:hover .master-drag-handle{color:#3157d5;background:#eef2ff}
+
+/* v2.0.16 — Master Data reference-aware deletion */
+.master-usage-warning{padding:10px 12px;border:1px solid #f0c36a;border-radius:9px;background:#fff8e8;color:#6f4b08;margin-bottom:12px}
+.master-usage-table{max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:9px}
+.master-usage-table .table{min-width:780px}
+.master-usage-table .table td{font-size:12px}
