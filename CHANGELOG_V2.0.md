@@ -142,3 +142,7 @@
 - The same controlled replacement flow is available for Workstream and Responsible Unit Masters.
 - Delete dialog continues to show every current reference and blocks deletion when no replacement Master exists.
 - Replacement preserves Plan Item dates, status, PIC names, Task and Sub-Task; Responsible Unit replacement deduplicates unit assignments.
+## v2.0.18
+- Gantt typography standardized: Milestone text uses bold gray; Task/Sub-Task/Activity text uses regular gray.
+- Applied to Dashboard activity bars, Dashboard milestone labels, and Detail Plan Gantt bars.
+

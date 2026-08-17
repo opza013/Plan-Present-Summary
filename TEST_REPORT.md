@@ -78,3 +78,8 @@ Validated locally on 2026-08-11:
 - Verified Responsible Unit replacement updates Milestone defaults and Plan Item responsibility rows with duplicate-unit merge.
 - Verified in-use Master with no alternative replacement is blocked from deletion.
 - Seed-data replacement regression: Milestone 18/18 references reassigned, Workstream 223/223, Responsible Unit 269/269; old-reference counts returned to zero before deletion.
+
+### v2.0.18 Gantt typography
+- Milestone labels: bold gray.
+- Non-milestone bar labels: regular gray.
+- Dashboard and Detail Plan markup/classes verified.

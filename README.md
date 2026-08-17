@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.17 — Integrated Control Tower
+# Range Operation Platform v2.0.18 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -177,3 +177,7 @@ Milestone/start triangle baselines are aligned with the lower edge of the active
 
 ## v2.0.17 — Replace before Master deletion
 When deleting an in-use Workstream, Key Milestone, or Responsible Unit, the deletion dialog lists all references and allows the user to replace them with another Master value before deleting the old value. For Key Milestones, Plan Items are reassigned to the selected Milestone while operational fields such as dates, status, PIC, Task and Sub-Task remain unchanged.
+
+## v2.0.18 — Gantt typography
+- Milestone text in Gantt uses bold gray.
+- Task, Sub-Task and Activity text in Gantt uses regular gray.

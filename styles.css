@@ -209,3 +209,39 @@
 .master-replace-box .section-title{margin-bottom:8px}
 .master-replace-box .ff{margin-bottom:7px}
 .master-replace-box select{width:100%}
+
+/* v2.0.18 — Gantt typography: Milestone bold gray; everything else regular gray */
+.gantt-font-milestone{
+  color:#667085!important;
+  font-weight:800!important;
+}
+.gantt-font-standard{
+  color:#667085!important;
+  font-weight:400!important;
+}
+.milestone-activity-bar>span.gantt-font-standard{
+  color:#667085!important;
+  font-weight:400!important;
+  text-shadow:none;
+}
+.gantt-bar-text.gantt-font-milestone{
+  color:#667085!important;
+  font-weight:800!important;
+}
+.gantt-bar-text.gantt-font-standard{
+  color:#667085!important;
+  font-weight:400!important;
+}
+/* Orange-triangle milestone labels stay semantically Milestone typography. */
+.portfolio-ms-label b,
+.portfolio-ms-label.compact b,
+.milestone-row-label b{
+  color:#667085!important;
+  font-weight:800!important;
+}
+.portfolio-ms-label small,
+.portfolio-ms-label.compact small,
+.milestone-row-label small{
+  color:#667085!important;
+  font-weight:400!important;
+}
