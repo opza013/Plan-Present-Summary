@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.11 — Integrated Control Tower
+# Range Operation Platform v2.0.12 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -148,3 +148,13 @@ Milestone/start triangle baselines are aligned with the lower edge of the active
 - Milestone drawer provides Edit Item and Open Detail Plan actions.
 - Dashboard `Live Week` header is forced to one line.
 - Each Project row now shows every distinct Live Week found under that project, while the existing Primary Live logic remains available as the main live driver.
+
+
+## v2.0.12
+- Separated Workstream from Task across Detail Plan data model.
+- Workstream is now a dropdown sourced from editable Workstream Master.
+- Task is now free-form text and is no longer maintained in Master Data.
+- Activity path is Project → Workstream → Task → Sub-Task → Milestone/Activity.
+- Dashboard hierarchy now groups the first expanded level by Workstream, then Task.
+- Existing activities migrate safely by copying the former Task/Workstream value into Workstream while preserving Task text.
+- Detail Plan structure and Gantt grouping now support Workstream → Task → Sub-Task.

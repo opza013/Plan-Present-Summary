@@ -38,3 +38,11 @@ Validated locally on 2026-08-11:
 - `/api/health`: PASS, version 2.0.11
 - VM render smoke test: Dashboard Gantt renders interactive milestone markers, right-side detail drawer shell, non-wrapping Live Week header, and updated 761px freeze pane.
 - Multi-live-week smoke test: projects with multiple live-driver milestones return multiple distinct week labels (for example W37 · W39).
+
+## v2.0.12 regression checks
+- `app.js` syntax check: PASS
+- `server.js` syntax check: PASS
+- `/api/health` reports v2.0.12: PASS
+- Seed data contains `masters.workstreams`: PASS
+- Plan Item editor contains Workstream dropdown + free-form Task input: PASS
+- Master Data exposes Workstream Master and no editable Task Master: PASS

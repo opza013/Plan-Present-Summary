@@ -39,3 +39,10 @@ Dashboard rendering supports Project → Task → Sub-Task → Milestone/Activit
 - Dashboard timeline viewport supports mouse hold-and-drag panning. Horizontal movement changes the timeline scroll position; vertical movement scrolls the project hierarchy.
 - Milestone triangles carry activity IDs and open a fixed right-side detail drawer without changing the planning model.
 - Dashboard Live Week display aggregates distinct live-driver weeks from all plan items under a project; Primary Live remains the principal live-driver field.
+
+## Schema v4 hierarchy (v2.0.12)
+`Project → Workstream → Task → Sub-Task/Phase → Activity/Milestone`
+
+- **Workstream**: controlled vocabulary from `masters.workstreams`; edited in Master Data and selected from a dropdown in the Plan Item editor.
+- **Task**: free-form text stored on each plan item; there is no Task Master dependency.
+- Existing schema-v3 records migrate non-destructively by copying the former combined Task/Workstream value into `workstream` while retaining the legacy task text.

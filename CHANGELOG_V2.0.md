@@ -99,3 +99,10 @@
 - Added milestone detail fields and Next Steps plus direct Edit/Open Detail Plan actions.
 - Dashboard Live Week header no longer wraps.
 - Dashboard Project rows display all distinct Live Weeks contained in the project.
+
+
+## v2.0.12
+- Split Workstream and Task into independent fields.
+- Added editable Workstream Master and Workstream dropdown in Plan Item editor.
+- Converted Task to free-form entry.
+- Updated Dashboard, Detail Plan, Presentation and milestone drawer paths to include Workstream.
