@@ -106,3 +106,10 @@
 - Added editable Workstream Master and Workstream dropdown in Plan Item editor.
 - Converted Task to free-form entry.
 - Updated Dashboard, Detail Plan, Presentation and milestone drawer paths to include Workstream.
+
+
+## v2.0.13
+- Reordered Edit Plan Item fields to Workstream → Milestone → Task → Sub-Task.
+- Made Task/Sub-Task optional.
+- Added Sub-Task → Task → Milestone bar-label fallback.
+- Restricted orange start triangles to Item Type = Milestone only.

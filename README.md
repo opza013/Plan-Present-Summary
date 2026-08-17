@@ -1,4 +1,4 @@
-# Range Operation Platform v2.0.12 — Integrated Control Tower
+# Range Operation Platform v2.0.13 — Integrated Control Tower
 
 This release consolidates the planned v1.4–v2.0 roadmap into one application. It keeps the current Project List, Dashboard, Detail Plan, Gantt and Presentation workflows, while upgrading the planning model, dashboard UX, shared team storage and governance.
 
@@ -158,3 +158,11 @@ Milestone/start triangle baselines are aligned with the lower edge of the active
 - Dashboard hierarchy now groups the first expanded level by Workstream, then Task.
 - Existing activities migrate safely by copying the former Task/Workstream value into Workstream while preserving Task text.
 - Detail Plan structure and Gantt grouping now support Workstream → Task → Sub-Task.
+
+
+## v2.0.13
+- Edit Plan Item field order: Workstream → Milestone → Task → Sub-Task.
+- Task and Sub-Task are optional free-form fields.
+- Bar text uses Sub-Task → Task → Milestone fallback priority.
+- Orange triangles render only at the Planned Start of true Milestone items.
+- Duration Activities remain bars without orange milestone triangles.

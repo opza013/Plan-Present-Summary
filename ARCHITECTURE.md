@@ -46,3 +46,9 @@ Dashboard rendering supports Project → Task → Sub-Task → Milestone/Activit
 - **Workstream**: controlled vocabulary from `masters.workstreams`; edited in Master Data and selected from a dropdown in the Plan Item editor.
 - **Task**: free-form text stored on each plan item; there is no Task Master dependency.
 - Existing schema-v3 records migrate non-destructively by copying the former combined Task/Workstream value into `workstream` while retaining the legacy task text.
+
+## v2.0.13 plan-item semantics
+- Edit order: Workstream → Milestone → Task → Sub-Task.
+- Workstream and Milestone are required; Task/Sub-Task are optional free-form planning detail.
+- Visible bar label resolves in this order: Sub-Task → Task → Milestone.
+- Orange timeline triangle is a milestone semantic marker and is rendered only for Item Type = Milestone at Planned Start.

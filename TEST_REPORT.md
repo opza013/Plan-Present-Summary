@@ -46,3 +46,11 @@ Validated locally on 2026-08-11:
 - Seed data contains `masters.workstreams`: PASS
 - Plan Item editor contains Workstream dropdown + free-form Task input: PASS
 - Master Data exposes Workstream Master and no editable Task Master: PASS
+
+
+## v2.0.13 regression checks
+- Edit Plan Item field order: PASS
+- Optional Task/Sub-Task save: PASS
+- Bar-label fallback helper: PASS
+- Milestone-only orange marker rendering: PASS
+- `/api/health` reports v2.0.13: PASS

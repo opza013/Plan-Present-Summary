@@ -183,3 +183,7 @@
 .dashboard-panel-empty{border:1px dashed #cbd5e1;border-radius:8px;padding:10px;color:var(--muted);font-size:10.5px;background:#fbfdff}
 .dashboard-panel-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
 @media(max-width:700px){.dashboard-milestone-panel{top:64px;right:0;bottom:0;width:94%;border-radius:0}.dashboard-panel-info-grid{grid-template-columns:1fr 1fr}}
+
+/* v2.0.13 — Plan-item bar labels; orange triangles are milestone-only. */
+.milestone-activity-bar{display:flex;align-items:center;padding:0 6px;overflow:hidden}
+.milestone-activity-bar>span{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:9px;font-weight:800;color:#fff;line-height:1}
